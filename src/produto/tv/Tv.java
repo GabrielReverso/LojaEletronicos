@@ -7,8 +7,8 @@ public class Tv extends Produto{
     private String resolucao;
     private String polegadas;
 
-    public Tv(String marca, String modelo, double preço, String resolucao, String polegadas) {
-        super(marca, modelo, preço);
+    public Tv(String tipo, String marca, String modelo, double preço, String resolucao, String polegadas) {
+        super(tipo, marca, modelo, preço);
         this.resolucao = resolucao;
         this.polegadas = polegadas;
     }
@@ -27,6 +27,11 @@ public class Tv extends Produto{
 
     public void setPolegadas(String polegadas) {
         this.polegadas = polegadas;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nResolucao: " + this.resolucao + "\nPolegadas: " + this.polegadas + "\n";
     }
     
 }

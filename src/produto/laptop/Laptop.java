@@ -9,8 +9,8 @@ public class Laptop extends Produto{
     private String ram;
     private String armazenamento;
 
-    public Laptop(String marca, String modelo, double preço, String cpu, String gpu, String ram, String armazenamento) {
-        super(marca, modelo, preço);
+    public Laptop(String tipo, String marca, String modelo, double preço, String cpu, String gpu, String ram, String armazenamento) {
+        super(tipo, marca, modelo, preço);
         this.cpu = cpu;
         this.gpu = gpu;
         this.ram = ram;
@@ -47,6 +47,11 @@ public class Laptop extends Produto{
 
     public void setArmazenamento(String armazenamento) {
         this.armazenamento = armazenamento;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nCPU: " + this.cpu + "\nGPU: " + this.gpu + "\nMemoria RAM: " + this.ram + "\nArmazenamento: " + this.armazenamento + "\n";
     }
     
 }

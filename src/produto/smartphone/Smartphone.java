@@ -8,8 +8,8 @@ public class Smartphone extends Produto {
     private String camera;
     private String ram;
 
-    public Smartphone(String marca, String modelo, double preço, String armazenamento, String camera, String ram) {
-        super(marca, modelo, preço);
+    public Smartphone(String tipo, String marca, String modelo, double preço, String armazenamento, String camera, String ram) {
+        super(tipo, marca, modelo, preço);
         this.armazenamento = armazenamento;
         this.camera = camera;
         this.ram = ram;
@@ -37,6 +37,11 @@ public class Smartphone extends Produto {
 
     public void setRam(String ram) {
         this.ram = ram;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nArmazenamento: " + this.armazenamento + "\nCamera: " + this.camera + "\nMemoria RAM: " + this.ram + "\n";
     }
     
     

@@ -1,15 +1,17 @@
 package produto;
 
-public class Produto {
+public class Produto implements Comparable<Produto> {
     
+    protected String tipo;
     protected String marca;
     protected String modelo; 
-    protected double preço;
+    protected double preco;
     
-    public Produto(String marca, String modelo, double preço) {
+    public Produto(String tipo, String marca, String modelo, double preco) {
+        this.tipo = tipo;
         this.marca = marca;
         this.modelo = modelo;
-        this.preço = preço;
+        this.preco = preco;
     }
 
     public String getMarca() {
@@ -24,12 +26,29 @@ public class Produto {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-    public double getPreço() {
-        return preço;
+    public double getPreco() {
+        return preco;
     }
-    public void setPreço(double preço) {
-        this.preço = preço;
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }    
     
+    @Override
+    public int compareTo(Produto p) {
+        return this.tipo.compareTo(p.tipo);
+    }
+
+    @Override
+    public String toString() {
+        return "\n\nTipo: " + this.tipo + "\nMarca: " + this.marca + "\nModelo: " + this.modelo + "\npreço: " + this.preco;
+    }
+
 }
