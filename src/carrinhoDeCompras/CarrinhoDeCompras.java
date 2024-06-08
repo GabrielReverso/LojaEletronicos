@@ -75,6 +75,7 @@ public class CarrinhoDeCompras{
     }
 
     public double obterValorTotal(){  
+        this.total = 0;
         for (Produto p : listaProdutosCarrinho){
             this.total += p.getPreco();
         }

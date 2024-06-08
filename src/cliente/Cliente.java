@@ -52,6 +52,4 @@ public class Cliente {
     public String toString() {
         return "\n\nNome: " + nome + "\nCPF: " + cpf + "\nSaldo: " + saldo + "\n";
     }
-
-
 }
